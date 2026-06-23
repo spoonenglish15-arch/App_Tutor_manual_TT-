@@ -69,6 +69,17 @@ h1{font-size:2.55rem;margin:0 0 20px;padding:0 4px;font-weight:300;text-align:ce
 <h1>How to Use the App</h1>
 
 <div class="accordion-item">
+<button class="accordion-header">App Download</button>
+<div class="accordion-content">
+<img src="app%20Logo.png" alt="Spoon English App" class="app-logo">
+<div class="download-buttons">
+<a href="#" class="action-button" id="ios-download-link">iOS</a>
+<a href="#" class="action-button" id="android-download-link">Android</a>
+</div>
+</div>
+</div>
+
+<div class="accordion-item">
 <button class="accordion-header"><span class="num">1</span>Member Matching</button>
 <div class="accordion-content">
 <img src="1.jpg" class="manual-image" alt="Member Matching">
@@ -146,6 +157,25 @@ function playButtonSound() {
 document.addEventListener('click', (e) => {
   if (e.target.closest('button, a.action-button')) playButtonSound();
 }, { capture: true });
+
+const IOS_DOWNLOAD_URL = 'https://apps.apple.com/kr/app/%EC%8A%A4%ED%91%BC%EC%9E%89%EA%B8%80%EB%A6%AC%EC%89%AC/id6755587378';
+const ANDROID_DOWNLOAD_URL = 'https://play.google.com/store/apps/details?id=com.tutee.spoon';
+
+function setupDownloadLink(id, url) {
+  const link = document.getElementById(id);
+  if (url) {
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  } else {
+    link.onclick = (e) => {
+      e.preventDefault();
+      showToast('Download link coming soon');
+    };
+  }
+}
+setupDownloadLink('ios-download-link', IOS_DOWNLOAD_URL);
+setupDownloadLink('android-download-link', ANDROID_DOWNLOAD_URL);
 
 document.querySelectorAll('.accordion-content').forEach(content => {
   const inner = document.createElement('div');
