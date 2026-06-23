@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Use the App</title>
+<meta name="description" content="스푼잉글리쉬 앱 사용 매뉴얼">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="스푼잉글리쉬">
+<meta property="og:title" content="How to Use the App">
+<meta property="og:description" content="스푼잉글리쉬 앱 사용 매뉴얼">
+<meta property="og:url" content="https://spoonenglish15-arch.github.io/App_user_manual_0620-/">
+<meta property="og:image" content="https://spoonenglish15-arch.github.io/App_user_manual_0620-/ogT-thumb.jpg">
+<meta property="og:image:secure_url" content="https://spoonenglish15-arch.github.io/App_user_manual_0620-/ogT-thumb.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="스푼잉글리쉬 앱 사용 매뉴얼">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to Use the App">
+<meta name="twitter:description" content="스푼잉글리쉬 앱 사용 매뉴얼">
+<meta name="twitter:image" content="https://spoonenglish15-arch.github.io/App_user_manual_0620-/ogT-thumb.jpg">
+<link rel="image_src" href="https://spoonenglish15-arch.github.io/App_user_manual_0620-/link_thumb_3rd.jpg">
+<link rel="icon" href="link_thumb_3rd.jpg" type="image/jpeg">
+<link rel="apple-touch-icon" href="link_thumb_3rd.jpg">
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;background:#F0E6DA;margin:0;padding:0;color:#4A3F35}
+.container{max-width:480px;margin:0 auto;padding:16px 16px 32px}
+.logo{display:block;width:216px;height:auto;margin:8px auto 16px}
+h1{font-size:2.55rem;margin:0 0 20px;padding:0 4px;font-weight:300;text-align:center;text-transform:uppercase;letter-spacing:.04em;color:#5C4A3A;line-height:1.2}
+.accordion-item{background:#FAF5EF;margin-bottom:6px;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(92,74,58,.08);border:1px solid #E8DDD0}
+.accordion-header{width:100%;padding:9px 34px 9px 12px;border:none;background:#FAF5EF;text-align:left;font-size:.875rem;font-weight:600;cursor:pointer;position:relative;line-height:1.3;color:#4A3F35;-webkit-tap-highlight-color:transparent}
+.accordion-header::after{content:"";position:absolute;right:14px;top:50%;width:7px;height:7px;border-right:2px solid #A68B6B;border-bottom:2px solid #A68B6B;transform:translateY(-70%) rotate(45deg);transition:transform .25s ease}
+.accordion-item.open .accordion-header{background:#F5EDE4}
+.accordion-item.open .accordion-header::after{transform:translateY(-30%) rotate(-135deg)}
+.accordion-header .num{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;margin-right:8px;background:#C4956A;color:#FFFBF7;border-radius:5px;font-size:.65rem;font-weight:700;vertical-align:middle;flex-shrink:0}
+.accordion-content{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s ease,padding .4s ease,border-color .4s ease;padding:0 16px;border-top:1px solid transparent;background:#FFFBF7}
+.accordion-content.active{grid-template-rows:1fr;padding:0 16px 16px;border-top-color:#E8DDD0}
+.accordion-inner{overflow:hidden;min-height:0}
+.accordion-content p{margin:12px 0 0;font-size:.875rem;line-height:1.6;color:#6B5D4F}
+.manual-image{width:100%;max-width:100%;height:auto;display:block;border-radius:8px;border:1px solid #E8DDD0;background:#FAF5EF}
+.manual-image-wrap{position:relative;margin-top:12px}
+.manual-image-wrap .manual-image{margin-top:0}
+.zoom-hint{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;padding:10px 16px;background:rgba(92,74,58,.82);color:#FFFBF7;border-radius:12px;font-size:.75rem;font-weight:600;line-height:1.3;text-align:center;pointer-events:none;opacity:0;transition:opacity .4s ease;z-index:2;box-shadow:0 4px 16px rgba(0,0,0,.15)}
+.zoom-hint.show{opacity:1}
+.expand-arrows{display:flex;align-items:center;justify-content:space-between;width:36px;animation:expandArrows 2s ease-in-out infinite}
+.expand-arrows .arrow{width:8px;height:8px;border-top:2px solid #FFFBF7;border-right:2px solid #FFFBF7;flex-shrink:0}
+.expand-arrows .arrow-left{transform:rotate(-135deg)}
+.expand-arrows .arrow-right{transform:rotate(45deg)}
+@keyframes expandArrows{0%,100%{width:32px}50%{width:72px}}
+.app-logo{display:block;width:100px;height:auto;margin:14px auto 0;border-radius:18px}
+.action-button{margin-top:14px;padding:12px 20px;border:none;border-radius:8px;background:#B8864B;color:#FFFBF7;font-size:.875rem;font-weight:600;cursor:pointer;width:100%;-webkit-tap-highlight-color:transparent;display:block;text-align:center;text-decoration:none}
+.action-button:active{background:#9A7340}
+.download-buttons{display:flex;flex-direction:row;gap:8px;margin-top:14px}
+.download-buttons .action-button{margin-top:0;flex:1}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#5C4A3A;color:#FAF5EF;padding:12px 24px;border-radius:8px;display:none;font-size:.875rem;z-index:100;white-space:nowrap}
+.modal-overlay{position:fixed;inset:0;background:rgba(74,63,53,.55);display:none;align-items:center;justify-content:center;padding:24px;z-index:200}
+.modal-overlay.show{display:flex}
+.modal-box{max-width:340px;width:100%;background:#FFFBF7;border-radius:12px;padding:24px 20px;box-shadow:0 8px 32px rgba(0,0,0,.2);border:1px solid #E8DDD0;text-align:center}
+.modal-text{margin:0 0 20px;font-size:.9rem;line-height:1.6;color:#4A3F35}
+.modal-button{padding:12px 32px;border:none;border-radius:8px;background:#B8864B;color:#FFFBF7;font-size:.875rem;font-weight:600;cursor:pointer;min-width:120px;-webkit-tap-highlight-color:transparent}
+.modal-button:active{background:#9A7340}
+</style>
+</head>
+<body>
+<div class="container">
+<img src="logo.png" alt="Logo" class="logo">
+<h1>How to Use the App</h1>
+
+<div class="accordion-item">
+<button class="accordion-header"><span class="num">1</span>Member Matching</button>
+<div class="accordion-content">
+<img src="1.jpg" class="manual-image" alt="Member Matching">
+</div>
+</div>
+
+<div class="accordion-item">
+<button class="accordion-header"><span class="num">2</span>Chat with Members</button>
+<div class="accordion-content">
+<img src="2.jpg" class="manual-image" alt="Chat with Members">
+</div>
+</div>
+
+<div class="accordion-item" data-section="rescheduling">
+<button class="accordion-header"><span class="num">3</span>Rescheduling</button>
+<div class="accordion-content">
+<img src="3.jpg" class="manual-image" alt="Rescheduling">
+</div>
+</div>
+
+<div class="accordion-item">
+<button class="accordion-header"><span class="num">4</span>Full Schedule</button>
+<div class="accordion-content">
+<img src="4.jpg" class="manual-image" alt="Full Schedule">
+</div>
+</div>
+
+<div class="accordion-item" data-section="class-notes">
+<button class="accordion-header"><span class="num">5</span>Class Notes</button>
+<div class="accordion-content">
+<img src="5.jpg" class="manual-image" alt="Class Notes">
+</div>
+</div>
+
+<div class="accordion-item" data-section="continue-classes">
+<button class="accordion-header"><span class="num">6</span>Continue Classes</button>
+<div class="accordion-content">
+<img src="6.jpg" class="manual-image" alt="Continue Classes">
+</div>
+</div>
+
+<div class="accordion-item" data-section="member-status">
+<button class="accordion-header"><span class="num">7</span>Member Status (ongoing / pause / stop)</button>
+<div class="accordion-content">
+<img src="7.jpg" class="manual-image" alt="Member Status">
+</div>
+</div>
+
+</div>
+
+<div id="toast" class="toast"></div>
+<div id="close-modal" class="modal-overlay" aria-hidden="true">
+<div class="modal-box">
+<p class="modal-text" id="close-modal-text"></p>
+<button type="button" class="modal-button" id="close-modal-btn">Got it</button>
+</div>
+</div>
+<audio id="button-sound" src="button.wav" preload="auto"></audio>
+
+<script>
+const buttonSound = document.getElementById('button-sound');
+
+let lastButtonSoundAt = 0;
+
+function playButtonSound() {
+  const now = Date.now();
+  if (now - lastButtonSoundAt < 250) return;
+  lastButtonSoundAt = now;
+
+  buttonSound.pause();
+  buttonSound.currentTime = 0;
+  buttonSound.play().catch(() => {});
+}
+
+document.addEventListener('click', (e) => {
+  if (e.target.closest('button, a.action-button')) playButtonSound();
+}, { capture: true });
+
+document.querySelectorAll('.accordion-content').forEach(content => {
+  const inner = document.createElement('div');
+  inner.className = 'accordion-inner';
+  while (content.firstChild) inner.appendChild(content.firstChild);
+  content.appendChild(inner);
+});
+
+document.querySelectorAll('.manual-image').forEach(img => {
+  const wrap = document.createElement('div');
+  wrap.className = 'manual-image-wrap';
+  img.parentNode.insertBefore(wrap, img);
+  wrap.appendChild(img);
+  const hint = document.createElement('div');
+  hint.className = 'zoom-hint';
+  hint.innerHTML = '<div class="expand-arrows"><span class="arrow arrow-left"></span><span class="arrow arrow-right"></span></div><span>Zoom</span>';
+  wrap.appendChild(hint);
+});
+
+function updateZoomHints(activeContent) {
+  document.querySelectorAll('.zoom-hint').forEach(h => {
+    h.classList.remove('show');
+    clearTimeout(h._hideTimer);
+  });
+  if (!activeContent) return;
+  const hint = activeContent.querySelector('.zoom-hint');
+  if (!hint) return;
+  hint.classList.add('show');
+  hint._hideTimer = setTimeout(() => hint.classList.remove('show'), 2000);
+}
+
+function closeAccordion(item, content) {
+  content.classList.remove('active');
+  item.classList.remove('open');
+  updateZoomHints(null);
+}
+
+const CLOSE_FLOWS = {
+  rescheduling: [
+    'If the class is rescheduled,<br>the member must be notified<br>through the chat.',
+    'When rescheduling,<br>all classes must be completed<br>within 30 days of the first class.'
+  ],
+  'class-notes': [
+    'Note completion<br>is the standard<br>for class counting.<br><br>It is also connected<br>to tutor payment.'
+  ],
+  'continue-classes': [
+    'When finishing the last class<br>or writing the final note,<br>the tutor must remind the member<br>to repurchase tickets<br>to continue classes.'
+  ],
+  'member-status': [
+    'Ongoing<br><br>When the member makes a payment,<br>the status automatically changes<br>to Ongoing.',
+    'Pause<br><br>If the member does not make a payment<br>within 7 days<br>from the last class date,<br>the status automatically changes<br>to Pause.',
+    'Stop<br><br>If the member no longer wants<br>to continue classes,<br>the tutor must manually change<br>the status to Stop.<br><br>Once changed to Stop,<br>the matching will be disconnected.'
+  ]
+};
+
+const closeModal = document.getElementById('close-modal');
+const closeModalText = document.getElementById('close-modal-text');
+const closeModalBtn = document.getElementById('close-modal-btn');
+
+function showCloseFlow(item, content, steps) {
+  let step = 0;
+
+  function showStep() {
+    closeModalText.innerHTML = steps[step];
+    closeModal.classList.add('show');
+    closeModal.setAttribute('aria-hidden', 'false');
+  }
+
+  closeModalBtn.onclick = () => {
+    step++;
+    if (step < steps.length) {
+      showStep();
+    } else {
+      closeModal.classList.remove('show');
+      closeModal.setAttribute('aria-hidden', 'true');
+      closeAccordion(item, content);
+    }
+  };
+
+  showStep();
+}
+
+document.querySelectorAll('.accordion-header').forEach(h => {
+  h.onclick = () => {
+    const item = h.parentElement;
+    const content = h.nextElementSibling;
+    const isOpen = content.classList.contains('active');
+    const closeSteps = CLOSE_FLOWS[item.dataset.section];
+
+    if (isOpen && closeSteps) {
+      showCloseFlow(item, content, closeSteps);
+      return;
+    }
+
+    document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) {
+      content.classList.add('active');
+      item.classList.add('open');
+      setTimeout(() => updateZoomHints(content), 400);
+    } else {
+      updateZoomHints(null);
+    }
+  };
+});
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.innerText = msg;
+  t.style.display = 'block';
+  setTimeout(() => t.style.display = 'none', 2000);
+}
+</script>
+</body>
+</html>
